@@ -87,6 +87,26 @@ impl EventHandler<GameError> for State {
                     )?;
                     graphics::draw(ctx, &rect, (ggez::mint::Point2 { x: 0.0, y: 0.0 },))?;
                 }
+
+                let line = Mesh::new_line(
+                    ctx,
+                    &vec![
+                        ggez::mint::Point2 { 
+                            x: 0.0,
+                            y: j as f32 * CELL_SIZE.1, 
+                        },
+                        ggez::mint::Point2 { 
+                            x: WINDOW_SIZE.0, 
+                            y: j as f32 * CELL_SIZE.1, 
+                        },
+                    ]
+                    .as_slice(),
+                    2.0,
+                    Color::BLACK,
+                )?;
+
+                graphics::draw(ctx, &line, (ggez::mint::Point2 { x: 0.0, y: 0.0 },))?;
+
             }
 
             if i == 0 {
