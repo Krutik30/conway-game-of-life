@@ -1,0 +1,18 @@
+# Compiled files
+/target/
+Cargo.lock
+
+# Generated documentation
+/doc/
+
+# IDE/editor files
+/.vscode/
+/.idea/
+*.rs.bk
+
+# Dependency directories
+/.cargo/
+
+# Ignore hidden files and directories
+.*
+!.gitignore
